@@ -34,7 +34,7 @@
 
 ## 实验过程
 
-#### 端口状态模拟
+### 端口状态模拟
 
 - **关闭状态**：对应端口没有开启监听, 防火墙没有开启。
 
@@ -72,7 +72,7 @@
 >
 > 若接收到 `SYN/ACK` 数据包（即检测到端口是**开启**的），便发送一个 ACK 确认包到目标主机，这样便完成了三次握手连接机制。成功后再终止连接。
 
- [tcp_connect_scan.py](code\tcp_connect_scan.py) 
+ [tcp_connect_scan.py](code/tcp_connect_scan.py) 
 
 * 端口状态为`关闭`
   * Attacker进行代码测试![image-20211010233741359](img/tcp_connet_scan-code-closed.png)
@@ -106,7 +106,7 @@
 
 ### TCP stealth scan
 
- [tcp_stealth_scan.py](code\tcp_stealth_scan.py) 
+ [tcp_stealth_scan.py](code/tcp_stealth_scan.py) 
 
 
 
@@ -134,7 +134,7 @@
 
 ### TCP Xmas scan 
 
- [TCP_Xmas_scan.py](code\TCP_Xmas_scan.py) 
+ [TCP_Xmas_scan.py](code/TCP_Xmas_scan.py) 
 
 > `TCP Xmas scan、TCP fin scan`及`TCP null scan`不涉及三次交互。它们都是先发送一个包，然后根据目标主机是否回复`R`来目标端口的状态。不同的是：
 >
@@ -170,7 +170,7 @@
 
 ### TCP fin scan 
 
- [TCP_fin_scan.py](code\TCP_fin_scan.py) 
+ [TCP_fin_scan.py](code/TCP_fin_scan.py) 
 
 > 发送 FIN 包，它可以直接通过防火墙，如果端口是关闭的就会回复一个 RST 包，如果端口是开放或过滤状态则对 FIN 包没有任何响应。
 
@@ -194,7 +194,7 @@
 
 ### TCP null scan
 
- [TCP_null_scan.py](code\TCP_null_scan.py) 
+ [TCP_null_scan.py](code/TCP_null_scan.py) 
 
 > 发送一个 TCP 数据包，关闭所有 TCP 报文头标记。
 >
@@ -222,7 +222,7 @@
 
 ### UDP scan
 
-* [UDP_scan.py](code\UDP_scan.py) 
+* [UDP_scan.py](code/UDP_scan.py) 
 
 > UDP是无连接的协议，通过发送`UDP+port`得到的回复确定被扫描主机的状态。
 >
